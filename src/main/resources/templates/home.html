@@ -18,31 +18,8 @@
 		    </div>
 		    
 		    <!-- Cards -->
-	        <div class="card-deck">
-			        <div class="card">
-	                    <img src="..." class="card-img-top" alt="...">
-					    <div class="card-body">
-					        <h5 class="card-title">Card title</h5>
-					        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					        <a href="#" class="btn btn-primary">Go somewhere</a>
-					    </div>
-					</div>
-	                <div class="card">
-	                    <img src="..." class="card-img-top" alt="...">
-	                    <div class="card-body">
-	                        <h5 class="card-title">Card title</h5>
-	                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-	                        <a href="#" class="btn btn-primary">Go somewhere</a>
-	                    </div>
-	                </div>
-	                <div class="card">
-	                    <img src="..." class="card-img-top" alt="...">
-	                    <div class="card-body">
-	                        <h5 class="card-title">Card title</h5>
-	                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-	                        <a href="#" class="btn btn-primary">Go somewhere</a>
-	                    </div>
-	                </div>
+	        <div class="card-deck" th:each="projectData : ${projects}" th:include="fragments/project :: project" 
+                th:with="projectData=${projectData}">
 			</div>
 		</div>
     </main>
@@ -50,7 +27,7 @@
     <footer th:replace="fragments/footer :: footer">
 	</footer>
 
-    <div th:replace="fragments/scripts :: scripts">
-    </div>
+    <span th:replace="fragments/scripts :: scripts">
+    </span>
 </body>
 </html>
