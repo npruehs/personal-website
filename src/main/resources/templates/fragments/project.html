@@ -3,13 +3,15 @@
 <head>
 </head>
 <body>
-    <div th:fragment="project" class="card">
-        <img th:src="${projectData.imgSrc}" class="card-img-top" th:alt="${projectData.name}">
-        <div class="card-body">
-            <h5 class="card-title" th:text="${projectData.name}"></h5>
-            <p class="card-text" th:text="${projectData.summary}">$</p>
-            <a th:href="${projectData.url}" class="btn btn-primary">Details</a>
-        </div>
+    <div th:fragment="project">
+	    <div class="card">
+	        <img th:src="${projectData.imgSrc}" class="card-img-top" th:alt="${projectData.name}">
+	        <div class="card-body">
+	            <h5 class="card-title" th:text="${projectData.name}"></h5>
+	            <p class="card-text" th:text="${projectData.summary}">$</p>
+	            <a th:href="${projectData.url}" class="btn btn-primary" target="_blank">Details</a>
+	        </div>
+	    </div>
     </div>
 </body>
 </html>

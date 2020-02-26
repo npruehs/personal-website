@@ -18,8 +18,10 @@
 		    </div>
 		    
 		    <!-- Cards -->
-	        <div class="card-deck" th:each="projectData : ${projects}" th:include="fragments/project :: project" 
-                th:with="projectData=${projectData}">
+		    <div class="card-deck">
+		        <div class="col-md-4" th:each="projectData : ${projects}" th:include="fragments/project :: project" 
+	                th:with="projectData=${projectData}">
+				</div>
 			</div>
 		</div>
     </main>
