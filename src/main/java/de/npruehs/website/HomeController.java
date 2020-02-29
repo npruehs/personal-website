@@ -1,5 +1,8 @@
 package de.npruehs.website;
 
+import java.util.Arrays;
+import java.util.Collections;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -54,16 +57,16 @@ public class HomeController {
 		projects[5].setUrl("https://play.google.com/store/apps/details?id=com.mobilemonsters.mmff_dev");
 		
 		projects[6] = new Project();
-		projects[6].setName("Blackguards 2");
-		projects[6].setSummary("Unity, game, C#, console, lead");
-		projects[6].setImgSrc("img/blackguards2.png");
-		projects[6].setUrl("https://www.playstation.com/en-us/games/blackguards-2-ps4/");
+		projects[6].setName("Tome");
+		projects[6].setSummary("Qt, tool, C++, open source, data, test automation");
+		projects[6].setImgSrc("img/tome.png");
+		projects[6].setUrl("http://www.tome-editor.org/");
 		
 		projects[7] = new Project();
-		projects[7].setName("Tome");
-		projects[7].setSummary("Qt, tool, C++, open source, data, test automation");
-		projects[7].setImgSrc("img/tome.png");
-		projects[7].setUrl("http://www.tome-editor.org/");
+		projects[7].setName("Blackguards 2");
+		projects[7].setSummary("Unity, game, C#, console, lead");
+		projects[7].setImgSrc("img/blackguards2.png");
+		projects[7].setUrl("https://www.playstation.com/en-us/games/blackguards-2-ps4/");
 		
 		projects[8] = new Project();
 		projects[8].setName("UE4 RTS");
@@ -72,23 +75,25 @@ public class HomeController {
 		projects[8].setUrl("https://github.com/npruehs/ue4-rts/tree/release/1.0");
 		
 		projects[9] = new Project();
-		projects[9].setName("A Year Of Rain");
-		projects[9].setSummary("Unreal Engine, game, C++, online, full stack, lead, gameplay, UI");
-		projects[9].setImgSrc("img/ayearofrain.png");
-		projects[9].setUrl("https://store.steampowered.com/app/319540/A_Year_Of_Rain/");
+		projects[9].setName("Speaking & Teaching");
+		projects[9].setSummary("conferences, universities");
+		projects[9].setImgSrc("img/speaking.png");
+		projects[9].setUrl("https://www.slideshare.net/npruehs/presentations");
 		
 		projects[10] = new Project();
-		projects[10].setName("Mission Runner");
-		projects[10].setSummary("Spring Boot, game, Java, online, full stack, JPA, Kafka, Hadoop, Thymeleaf, Webflux, Swagger, Android, Retrofit, Dagger, Room, JUnit, Google Truth, Gradle, Maven, Docker, localization");
-		projects[10].setImgSrc("img/mission_runner.png");
-		projects[10].setUrl("https://github.com/npruehs/mission-runner");
+		projects[10].setName("A Year Of Rain");
+		projects[10].setSummary("Unreal Engine, game, C++, online, full stack, lead, gameplay, UI");
+		projects[10].setImgSrc("img/ayearofrain.png");
+		projects[10].setUrl("https://store.steampowered.com/app/319540/A_Year_Of_Rain/");
 		
 		projects[11] = new Project();
-		projects[11].setName("Speaking & Teaching");
-		projects[11].setSummary("conferences, universities");
-		projects[11].setImgSrc("img/speaking.png");
-		projects[11].setUrl("https://www.slideshare.net/npruehs/presentations");
-		
+		projects[11].setName("Mission Runner");
+		projects[11].setSummary("Spring Boot, game, Java, online, full stack, JPA, Kafka, Hadoop, Thymeleaf, Webflux, Swagger, Android, Retrofit, Dagger, Room, JUnit, Google Truth, Gradle, Maven, Docker, localization");
+		projects[11].setImgSrc("img/mission_runner.png");
+		projects[11].setUrl("https://github.com/npruehs/mission-runner");
+
+		Collections.reverse(Arrays.asList(projects)); 
+
 		model.addAttribute("projects", projects);
 		return "home";
 	}
