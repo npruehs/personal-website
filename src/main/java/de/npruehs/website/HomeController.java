@@ -97,4 +97,9 @@ public class HomeController {
 		model.addAttribute("projects", projects);
 		return "home";
 	}
+	
+	@GetMapping("/impressum")
+	public String impressum() {
+		return "impressum";
+	}
 }
