@@ -79,9 +79,9 @@ public class HomeController {
 		
 		projects[10] = new Project();
 		projects[10].setName("Mission Runner");
-		projects[10].setSummary("Spring Boot, game, Java, online, full stack, JPA, Kafka, Hadoop, Swagger, Android, Retrofit, Dagger, Room, localization, test automation");
-		projects[10].setImgSrc("");
-		projects[10].setUrl("#");
+		projects[10].setSummary("Spring Boot, game, Java, online, full stack, JPA, Kafka, Hadoop, Thymeleaf, Webflux, Swagger, Android, Retrofit, Dagger, Room, JUnit, Google Truth, Gradle, Maven, Docker, localization");
+		projects[10].setImgSrc("img/mission_runner.png");
+		projects[10].setUrl("https://github.com/npruehs/mission-runner");
 		
 		projects[11] = new Project();
 		projects[11].setName("Speaking & Teaching");
